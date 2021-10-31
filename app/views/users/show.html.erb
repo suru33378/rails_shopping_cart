@@ -1,0 +1,15 @@
+<h1><%= @user.name %></h1>
+<%= link_to 'Edit', edit_user_path(@user) %>
+<p><b>Mobile:</b> <%= @user.mobile %></p>
+<p><b>Age:</b> <%= @user.age %></p>
+
+
+<h3>Addresses</h3>
+<ul>
+  <% @user.addresses.each do |address| %>
+  <li><%= link_to address.town, address_path(address) %></li>
+  <% end %>
+</ul><br>
+
+<p><%= link_to 'Delete', @user, method: 'delete', data: { confirm: 'Are you sure?' }%></p>
+<p><%= link_to 'Go back to all users', users_path %></p>

@@ -1,0 +1,9 @@
+
+<h1>List of Addresses</h1>
+<ul><% @addresses.each do |address| %>
+  <li>
+    <%= link_to address.town, address_path(address) %>
+  <% end %></li>
+</ul>
+
+<div><%= link_to 'Create Address', new_address_path %></div>
