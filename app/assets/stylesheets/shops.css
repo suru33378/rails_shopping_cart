@@ -1,0 +1,33 @@
+.shops-container{
+    background-color: lightblue;
+    height: 230px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+.shop-bg-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.application-container{
+    background-color: navy;
+    height: 110vh;
+}
+
+
+.shop-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+.quantity-field{
+    width: 30px;
+    height: 15px;
+}
+.shop-list{
+    font-size: 10px;
+}

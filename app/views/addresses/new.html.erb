@@ -1,10 +1,16 @@
-<h3>Add Address</h3>
-<%= form_with model: @address do |form| %>
-  <p>Door No: <%= form.number_field :doorno %></p>
-  <p>Town: <%= form.text_field :town %></p>
-  <p>District: <%= form.text_field :district %></p>
-  <p>State: <%= form.text_field :state %></p>
+<div class="background">
+  <div class="user-container">
+      <h3>Add Address</h3>
+    <%= form_with model: @address do |form| %>
+      <p>Door No: <%= form.number_field :doorno %></p>
+      <p>Town: <%= form.text_field :town %></p>
+      <p>District: <%= form.text_field :district %></p>
+      <p>State: <%= form.text_field :state %></p>
 
-  <p>User: <%= form.select :user_id, User.all.map { |user| [ user.name, user.id ] } %></p>
-  <%= form.submit %>
-<% end %>
+      <p>User: <%= form.select :user_id, User.all.map { |user| [ user.name, user.id ] } %></p>
+      <%= form.submit %>
+    <% end %>
+
+
+  </div>
+</div>

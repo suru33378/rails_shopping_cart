@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -20,27 +21,31 @@
 <div class="application-container">
 <div class="shop-bg-container">
         
-<% @products.each do |product| %>
+<% @order_items.each do |item| %>
   
   
-  <div class="card-container p-3">
+  <div class="cart-shops-container p-3">
   
-  <%= link_to image_tag(product.imageUrl, :class => "shop-image"),product %>
-    <p class="shop-list font-weight-bold mb-0">name:<%= product.name %></p>
-    <p class="shop-list mb-0">price:<%= product.price %></p>
-    <p class="shop-list mb-0">rating:<%= product.rating %></p>
+  <%= image_tag(item.product.imageUrl, :class => "shop-image")%>
+    <p class="shop-list font-weight-bold mb-0">name:<%= item.product.name %></p>
+    <p class="shop-list mb-0">price:<%= item.product.price %></p>
+    <p class="shop-list mb-0">rating:<%= item.product.rating %></p>
 
-    <p class="shop-list font-weight-bold mb-0"><%= link_to 'Edit', edit_product_path(product) %></p>
-    <p><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }%></p>
+    <%= form_for item do |f| %>
+        <%= f.hidden_field :product_id, :value => item.product.id %>
+        <p class="card-shop-list"><%= f.number_field :quantity, :value => item.quantity.to_i, :class =>"quantity-field" %></p>
+        <div class="text-left mt-2">
+            <p class="add-cart"><%= f.submit "update cart", :class => "btn btn-primary" %></p>
+        </div>
+    <% end %>
+    <p>subtotal: <%= item.total %></p>
     </div>
 
 
 <% end %>
 
 </div>
-<div class="text-center">
-    <%= link_to 'Add product', new_product_path, :class => "btn btn-primary" %>
-</div>
+
 </div>
 
 </body>
@@ -52,5 +57,4 @@
             
             
   
-
 

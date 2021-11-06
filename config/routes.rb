@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
+  
   resources :products
-  #get 'addresses/index'
-  #get 'addresses/show'
-  #get 'addresses/new'
-  #get 'addresses/edit'
-  #get 'users/index'
-  #get 'users/show'
-  #get 'users/new'
-  #get 'users/edit'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :shops, only:[:index, :show]
+  resources :order_items
+  resources :cards, only:[:index, :show]
+  
   resources :users, :addresses
 end

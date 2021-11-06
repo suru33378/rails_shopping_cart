@@ -1,0 +1,11 @@
+.card-shop-list{
+    font-size: 10px;
+}
+.cart-shops-container{
+    background-color: lightblue;
+    height: 250px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 10px;
+
+}

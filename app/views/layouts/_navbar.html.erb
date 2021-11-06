@@ -21,14 +21,17 @@
 <div class="d-flex flex-row">
 
     <div class="">
-    <a class="navbar-brand"><%= link_to "Home", users_path%></a>
+    <a class="navbar-brand"><%= link_to "Home", users_path, :class=>"btn btn-primary"%></a>
     </div>
 
     <div >
-    <a class="navbar-brand"><%= link_to "product", products_path%></a>
+    <a class="navbar-brand"><%= link_to "product", products_path, :class=>"btn btn-primary" %></a>
     </div>
     <div >
-    <a class="navbar-brand"><%= link_to "Address", addresses_path%></a>
+    <a class="navbar-brand"><%= link_to "Address", addresses_path, :class=>"btn btn-primary" %></a>
+    </div>
+    <div >
+    <a class="navbar-brand"><%= link_to "Shop", shops_path, :class=>"btn btn-primary" %></a>
     </div>
 </div>
   

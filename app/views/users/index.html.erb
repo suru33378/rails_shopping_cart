@@ -1,11 +1,17 @@
-<h1>List of Users</h1>
-<ul><% @users.each do |user| %>
-  <li>
-    <%= link_to user.name, user_path(user) %>
-  <% end %></li>
-</ul>
 
-<div><%= link_to 'Create User', new_user_path %></div>
+<div class="background">
+<h1 class="heading">List of Users</h1>
+    <div class="user-container">
+        <ul class="list"><% @users.each do |user| %>
+          <li>
+            <p class="paragraph"><%= link_to user.name, user_path(user), :class=>"para" %></p>
+          <% end %></li>
+        </ul>
+
+      <div class="create"><%= link_to 'Create User', new_user_path %></div>
+    </div>
+</div>
+  
 
 
 

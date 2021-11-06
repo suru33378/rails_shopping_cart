@@ -1,7 +1,13 @@
-<h3>Add User</h3>
-<%= form_with model: @user do |form| %>
-  <p>Name: <%= form.text_field :name %></p>
-  <p>Mobile: <%= form.number_field :mobile %></p>
-  <p>Age: <%= form.number_field :age %></p>
-  <%= form.submit %>
-<% end %>
+<div class="background">
+  <div class="user-container">
+      <h3>Add User</h3>
+      <%= form_with model: @user do |form| %>
+        <p>Name: <%= form.text_field :name %></p>
+        <p>Mobile: <%= form.number_field :mobile %></p>
+        <p>Age: <%= form.number_field :age %></p>
+        <%= form.submit %>
+      <% end %>
+  </div>
+    
+</div>
+
